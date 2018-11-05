@@ -1,0 +1,24 @@
+{
+  "name": "emitter-server",
+  "version": "1.0.0",
+  "description": "Emitter server to handle queue and channel creation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "dev": "yarn build && nodemon dist/app.js"
+  },
+  "author": "Anju Cheran",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "emitter-io": "^1.25.0",
+    "node-schedule": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.18.5",
+    "rimraf": "^2.6.2"
+  }
+}
